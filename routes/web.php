@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
+use App\Http\Controllers\AuthController;
+
+Route::controller(AuthController::class)->group(function () {
+    Route::get('/auth/register', 'showUserRegistration');
 });
