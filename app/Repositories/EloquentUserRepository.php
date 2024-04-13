@@ -71,6 +71,6 @@ final class EloquentUserRepository implements UserRepositoryInterface
      */
     public function getByUsername(string|null $username): ?User
     {
-        return User::where("username", $username)->first();
+        return User::where("name", $username)->first();
     }
 }
