@@ -48,7 +48,23 @@ class LoginController extends Controller
         }
 
         $request->session()->regenerate();
- 
+
         return redirect()->route('user_home.index');
+    }
+
+    /**
+     * Logs out the user.
+     *
+     * @param Request $request
+     * @return RedirectResponse
+     */
+    public function logout(Request $request): RedirectResponse
+    {
+        Auth::logout();
+
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+
+        return redirect('/');
     }
 }

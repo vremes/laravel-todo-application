@@ -24,6 +24,7 @@ Route::controller(RegisterController::class)->group(function () {
 Route::controller(LoginController::class)->group(function () {
     Route::get('/auth/login', 'view')->name('auth.login');
     Route::post('/auth/login', 'handle')->name('auth.handle_login');
+    Route::get('/auth/logout', 'logout')->name('auth.logout');
 });
 
 Route::controller(UserHomeController::class)->group(function () {
