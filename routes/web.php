@@ -37,4 +37,4 @@ Route::controller(TodoApiController::class)->group(function () {
     Route::post('/api/todos', 'create')->name('todo_api.create');
 });
 
-Route::get('/set-locale/{locale}', [LocaleController::class, 'set']);
+Route::get('/set-locale/{locale}', [LocaleController::class, 'set'])->name('app.set_locale');
