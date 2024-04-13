@@ -13,10 +13,6 @@ use Illuminate\View\View;
  */
 class LoginController extends Controller
 {
-    public function __construct(protected EloquentUserRepository $userRepository)
-    {
-    }
-
     /**
      * Renders login page.
      *

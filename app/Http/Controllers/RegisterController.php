@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\UserRegistrationRequest;
-use App\Repositories\EloquentUserRepository;
+use App\Models\User;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
@@ -12,11 +12,7 @@ use Illuminate\View\View;
  * Controller that takes care of user registrations.
  */
 class RegisterController extends Controller
-{    
-    public function __construct(protected EloquentUserRepository $userRepository)
-    {
-    }
-
+{   
     /**
      * Renders registration view.
      *
@@ -40,7 +36,7 @@ class RegisterController extends Controller
 
         $username = $validated['name'];
 
-        $user = $this->userRepository->getByUsername($username);
+        $user = User::where('username', $username)->first();
 
         if ($user) {
             return redirect()->route('auth.register')->withErrors([
@@ -48,7 +44,7 @@ class RegisterController extends Controller
             ]);
         }
 
-        $this->userRepository->create($validated);
+        User::create($validated);
 
         return redirect()->route('auth.register')->with('message-success', 'Registration successful.');
     }
