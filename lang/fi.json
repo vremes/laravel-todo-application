@@ -1,0 +1,11 @@
+{
+    "Login": "Kirjaudu sisään",
+    "Register": "Rekisteröidy",
+    "Username": "Käyttäjänimi",
+    "Password": "Salasana",
+    "Enter username": "Syötä käyttäjänimi",
+    "Enter password": "Syötä salasana",
+    "Confirm password": "Vahvista salasana",
+    "Email address (optional)": "Sähköpostiosoite (valinnainen)",
+    "Enter email address (optional)": "Syötä Sähköpostiosoite (valinnainen)"
+}
