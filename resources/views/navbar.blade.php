@@ -9,9 +9,17 @@
             <ul class="navbar-nav">
                 @auth
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link active" href="{{ route('user_home.index') }}">Home</a>
                 </li>
                 @endauth
+                @guest
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('auth.login') }}">{{ __('Login') }}</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('auth.register') }}">{{ __('Register') }}</a>
+                </li>
+                @endguest
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
