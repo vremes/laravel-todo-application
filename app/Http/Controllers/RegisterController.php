@@ -36,7 +36,7 @@ class RegisterController extends Controller
 
         $username = $validated['name'];
 
-        $user = User::where('username', $username)->first();
+        $user = User::where('name', $username)->first();
 
         if ($user) {
             return redirect()->route('auth.register')->withErrors([
