@@ -36,10 +36,10 @@ final class EloquentUserRepository implements UserRepositoryInterface
     /**
      * Delertes user by ID.
      *
-     * @param string|integer $id
+     * @param integer $id
      * @return boolean
      */
-    public function deleteById(int|string $id): bool
+    public function deleteById(int $id): bool
     {
         $user = $this->getById($id);
 
@@ -55,10 +55,10 @@ final class EloquentUserRepository implements UserRepositoryInterface
     /**
      * Returns user by ID or null if not found.
      *
-     * @param integer|string $id
+     * @param integer $id
      * @return User|null
      */
-    public function getById(int|string $id): ?User
+    public function getById(int $id): ?User
     {
         return User::find($id);
     }

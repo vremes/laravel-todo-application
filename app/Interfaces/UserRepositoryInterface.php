@@ -9,10 +9,10 @@ interface UserRepositoryInterface
     /**
      * Returns user by ID.
      *
-     * @param integer|string $id
+     * @param integer $id
      * @return User|null
      */
-    public function getById(int|string $id): ?User;
+    public function getById(int $id): ?User;
 
     /**
      * Returns user by username.
@@ -42,8 +42,8 @@ interface UserRepositoryInterface
     /**
      * Deletes user by ID.
      *
-     * @param integer|string $id
+     * @param integer $id
      * @return bool
      */
-    public function deleteById(int|string $id): bool;
+    public function deleteById(int $id): bool;
 }
