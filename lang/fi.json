@@ -8,5 +8,8 @@
     "Enter password": "Syötä salasana",
     "Confirm password": "Vahvista salasana",
     "Email address (optional)": "Sähköpostiosoite (valinnainen)",
-    "Enter email address (optional)": "Syötä Sähköpostiosoite (valinnainen)"
+    "Enter email address (optional)": "Syötä Sähköpostiosoite (valinnainen)",
+    "Invalid username or password.": "Väärä käyttäjänimi tai salasana.",
+    "User with this username already exists.": "Käyttäjänimi on jo käytössä.",
+    "Registration successful.": "Rekisteröinti onnistui ."
 }

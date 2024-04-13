@@ -8,5 +8,8 @@
     "Enter password": "Enter password",
     "Confirm password": "Confirm password",
     "Email address (optional)": "Email address (optional)",
-    "Enter email address (optional)": "Enter email address (optional)"
+    "Enter email address (optional)": "Enter email address (optional)",
+    "Invalid username or password": "Invalid username or password",
+    "User with this username already exists.": "User with this username already exists.",
+    "Registration successful.": "Registration successful."
 }

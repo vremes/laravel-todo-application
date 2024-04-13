@@ -39,7 +39,7 @@ class LoginController extends Controller
 
         if (Auth::attempt($credentials) === false) {
             return redirect()->back()->withErrors([
-                'Invalid username or password.',
+                __('Invalid username or password.')
             ]);
         }
 

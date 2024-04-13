@@ -40,12 +40,12 @@ class RegisterController extends Controller
 
         if ($user) {
             return redirect()->route('auth.register')->withErrors([
-                'User with this username already exists.',
+                __('User with this username already exists.'),
             ]);
         }
 
         User::create($validated);
 
-        return redirect()->route('auth.register')->with('message-success', 'Registration successful.');
+        return redirect()->route('auth.register')->with('message-success', __('Registration successful.'));
     }
 }
