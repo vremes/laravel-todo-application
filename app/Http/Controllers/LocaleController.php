@@ -17,13 +17,9 @@ class LocaleController extends Controller
      */
     public function set(Request $request, ?string $locale = null): RedirectResponse
     {
-        $isValidLocale = Locale::isValid($locale);
+        $validatedLocale = Locale::getValidatedLocale($locale);
 
-        if ($isValidLocale === false) {
-            $locale = Locale::ENGLISH->value;
-        }
-
-        $localeCookie = cookie()->forever('locale', $locale);
+        $localeCookie = cookie()->forever('locale', $validatedLocale);
 
         return redirect()->back()->cookie($localeCookie);
     }

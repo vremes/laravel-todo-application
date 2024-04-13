@@ -19,14 +19,10 @@ class SetLocaleMiddleware
     {
         $locale = $request->cookie('locale');
 
-        $isValidLocale = Locale::isValid($locale);
+        $validatedLocale = Locale::getValidatedLocale($locale);
 
-        if ($isValidLocale === false) {
-            $locale = Locale::ENGLISH->value;
-        }
-
-        App::setLocale($locale);
-
+        App::setLocale($validatedLocale);
+    
         return $next($request);
     }
 }

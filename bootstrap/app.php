@@ -12,6 +12,7 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware) {
+        $middleware->encryptCookies(except: ['locale']);
         $middleware->append(SetLocaleMiddleware::class);
     })
     ->withExceptions(function (Exceptions $exceptions) {
