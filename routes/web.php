@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\LocaleController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\TodoApiController;
@@ -35,3 +36,5 @@ Route::controller(UserHomeController::class)->group(function () {
 Route::controller(TodoApiController::class)->group(function () {
     Route::post('/api/todos', 'create')->name('todo_api.create');
 });
+
+Route::get('/set-locale/{locale}', [LocaleController::class, 'set']);
