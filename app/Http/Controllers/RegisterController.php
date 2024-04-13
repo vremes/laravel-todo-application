@@ -8,6 +8,9 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 
+/**
+ * Controller that takes care of user registrations.
+ */
 class RegisterController extends Controller
 {    
     public function __construct(protected EloquentUserRepository $userRepository)
