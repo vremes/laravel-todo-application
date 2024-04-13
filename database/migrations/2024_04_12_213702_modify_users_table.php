@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
             $table->string('email')->nullable()->default(null)->change();
+            $table->dropUnique('users_email_unique');
         });
     }
 
@@ -22,7 +23,7 @@ return new class extends Migration
     public function down(): void
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->string('email')->unique()->change();
+            $table->string('email')->unique();
         });
     }
 };
