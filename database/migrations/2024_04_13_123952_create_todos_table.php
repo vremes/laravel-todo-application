@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('todos', function (Blueprint $table) {
             $table->uuid('id')->primary();
-            $table->string('title')->nullable();
+            $table->string('title');
             $table->string('description')->nullable();
             $table->bigInteger('user_id')->unsigned();
             $table->foreign('user_id')
