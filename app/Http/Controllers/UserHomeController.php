@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Todo;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 
@@ -17,6 +18,12 @@ class UserHomeController extends Controller
      */
     public function index(Request $request): View
     {
-        return view('home.index');
+        $userId = auth()->id();
+
+        $todos = Todo::where("user_id", $userId)->orderBy('created_at', 'desc')->get();
+
+        return view('home.index', [
+            'todos' => $todos,
+        ]);
     }
 }

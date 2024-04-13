@@ -1,4 +1,5 @@
 {
+    "Home": "Home",
     "Language": "Language",
     "Login": "Login",
     "Register": "Register",
@@ -11,5 +12,16 @@
     "Enter email address (optional)": "Enter email address (optional)",
     "Invalid username or password": "Invalid username or password",
     "User with this username already exists.": "User with this username already exists.",
-    "Registration successful.": "Registration successful."
+    "Registration successful.": "Registration successful.",
+    "Create todo": "Create todo",
+    "Description (optional)": "Description (optional)",
+    "Save": "Save",
+    "Close": "Close",
+    "Cancel": "Cancel",
+    "Delete": "Delete",
+    "Delete todo": "Delete todo",
+    "Todo created successfully.": "Todo created successfully.",
+    "Todo deleted successfully.": "Todo deleted succesfully.",
+    "You have reached the amount limit of todos.": "You have reached the amount limit of todos.",
+    "Are you sure you want to delete this todo?": "Are you sure you want to delete this todo?"
 }

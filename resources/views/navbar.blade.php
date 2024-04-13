@@ -9,7 +9,7 @@
             <ul class="navbar-nav">
                 @auth
                 <li class="nav-item">
-                    <a class="nav-link active" href="{{ route('user_home.index') }}">Home</a>
+                    <a class="nav-link" href="{{ route('user_home.index') }}">{{ __('Home') }}</a>
                 </li>
                 @endauth
                 @guest

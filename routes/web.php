@@ -3,7 +3,7 @@
 use App\Http\Controllers\LocaleController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
-use App\Http\Controllers\TodoApiController;
+use App\Http\Controllers\TodoController;
 use App\Http\Controllers\UserHomeController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
@@ -33,8 +33,9 @@ Route::controller(UserHomeController::class)->group(function () {
     Route::get('/home', 'index')->name('user_home.index');
 })->middleware('auth');
 
-Route::controller(TodoApiController::class)->group(function () {
-    Route::post('/api/todos', 'create')->name('todo_api.create');
+Route::controller(TodoController::class)->group(function () {
+    Route::post('/todos', 'create')->name('todos.create');
+    Route::post('/todos/{id}/delete', 'delete')->name('todos.delete');
 });
 
 Route::get('/set-locale/{locale}', [LocaleController::class, 'set'])->name('app.set_locale');
