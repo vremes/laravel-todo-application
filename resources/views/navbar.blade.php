@@ -11,6 +11,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('user_home.index') }}">{{ __('Home') }}</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('auth.logout') }}">{{ __('Logout') }}</a>
+                </li>
                 @endauth
                 @guest
                 <li class="nav-item">

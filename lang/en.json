@@ -23,5 +23,6 @@
     "Todo created successfully.": "Todo created successfully.",
     "Todo deleted successfully.": "Todo deleted succesfully.",
     "You have reached the amount limit of todos.": "You have reached the amount limit of todos.",
-    "Are you sure you want to delete this todo?": "Are you sure you want to delete this todo?"
+    "Are you sure you want to delete this todo?": "Are you sure you want to delete this todo?",
+    "Logout": "Logout"
 }
