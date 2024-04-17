@@ -32,7 +32,7 @@ class TodoController extends Controller
 
         if ($currentTodosAmount >= self::TODOS_LIMIT) {
             return back()->withErrors([
-                __('You have reached the amount limit of todos.'),
+                __('You have added the maximum amount of todos.'),
             ]);
         }
 

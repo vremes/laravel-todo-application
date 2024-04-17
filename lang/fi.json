@@ -23,7 +23,7 @@
     "Delete todo": "Poista tehtävä",
     "Todo created successfully.": "Tehtävä luotiin onnistuneesti.",
     "Todo deleted successfully.": "Tehtävä poistettiin onnistuneesti.",
-    "You have reached the amount limit of todos.": "Olet jo lisänny makisimimäärän tehtäviä.",
+    "You have added the maximum amount of todos.": "Olet jo lisännyt makisimimäärän tehtäviä.",
     "Are you sure you want to delete this todo?": "Haluatko varmasti poistaa tämän tehtävän?",
     "Logout": "Kirjaudu ulos"
 }
